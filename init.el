@@ -71,40 +71,11 @@
                           (_ nil))))
       `(quelpa '(,pkg ,@(if repo-or-url repo-or-url url)  ,@(if files `(:files ,files)))))))
 
-(package! (setup :host sourcehut :repo "pkal/setup"))
-
-;; TODO:
-;; (package! (libgit
-;;            :host github
-;;            :repo "magit/libegit2"
-;;            :files ("CMakeLists.txt"
-;;                    ("libgit2" "libgit2/cmake")
-;;                    ("libgit2" "libgit2/CMakeLists.txt")
-;;                    ("libgit2" "libgit2/COPYING")
-;;                    ("libgit2" "libgit2/deps")
-;;                    ("libgit2" "libgit2/.HEADER")
-;;                    ("libgit2" "libgit2/include")
-;;                    ("libgit2" "libgit2/libgit2_clar.supp")
-;;                    ("libgit2" "libgit2/libgit2.pc.in")
-;;                    ("libgit2" "libgit2/script")
-;;                    ("libgit2" "libgit2/src")
-;;                    "libgit.el"
-;;                    "Makefile"
-;;                    "src"
-;;                    "uthash")))
-
-;; (package! (magit-libgit
-;;            :host github
-;;            :repo "magit/magit"
-;;            :files ("lisp/magit-libgit.el"
-;;                    "lisp/magit-libgit-pkg.el")))
-
-
+(package! (setup :host codeberg :repo "pkal/setup.el"))
 (package! (eglot-grammarly :host github :repo "emacs-grammarly/eglot-grammarly"))
 (package! (easy-kill-extras :host github
                             :build (:not autoloads)
                             :repo "knu/easy-kill-extras.el"))
-
 (package! (bookmark+ :host github :repo "emacsmirror/bookmark-plus"))
 (package! (sly-el-indent :host github :repo "cireu/sly-el-indent" :files ("*.el" "lib")))
 (package! (ox-odt
