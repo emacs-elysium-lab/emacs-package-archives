@@ -73,7 +73,7 @@
 
 (package! (praise :host github 
                                  :repo "emacs-elysium-lab/praise-mode"))
-(package! (chairs.el :host github :repo "emacs-elysium-lab/chairs.el"))
+(package! (chairs :host github :repo "emacs-elysium-lab/chairs.el"))
 (package! (setup :host codeberg :repo "pkal/setup.el"))
 (package! (eglot-grammarly :host github :repo "emacs-grammarly/eglot-grammarly"))
 (package! (easy-kill-extras :host github
