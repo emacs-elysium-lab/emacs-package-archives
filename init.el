@@ -70,8 +70,10 @@
                           (`sourcehut `(:fetcher git :url ,(concat "https://git.sr.ht/~" repo)))
                           (_ nil))))
       `(quelpa '(,pkg ,@(if repo-or-url repo-or-url url)  ,@(if files `(:files ,files)))))))
+
 (package! (praise :host github 
                                  :repo "emacs-elysium-lab/praise-mode"))
+(package! (chairs.el :host github :repo "emacs-elysium-lab/chairs.el"))
 (package! (setup :host codeberg :repo "pkal/setup.el"))
 (package! (eglot-grammarly :host github :repo "emacs-grammarly/eglot-grammarly"))
 (package! (easy-kill-extras :host github
@@ -96,6 +98,5 @@
 (package! (ol-wl :host sourcehut :repo "bzg/org-contrib" :files ("lisp/ol-wl.el")))
 (package! (eglot-booster :host github :repo "jdtsmith/eglot-booster"))
 (package! (haskell-ng-mode :host gitlab :repo "magus/haskell-ng-mode"))
-(package! (chairs.el :host github :repo "emacs-elysium-lab/chairs.el"))
 
 ;;; init.el ends here
