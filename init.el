@@ -97,7 +97,7 @@
 (package! (haskell-ng-mode :host gitlab :repo "magus/haskell-ng-mode"))
 (package! (show-blame-eldoc-mode :host github 
                                  :repo "emacs-elysium-lab/show-blame-eldoc-mode"
-                                 :files ("sbe.el"))
+                                 :files ("sbe.el")))
 (package! (chairs.el :host github :repo "emacs-elysium-lab/chairs.el"))
 
 ;;; init.el ends here
