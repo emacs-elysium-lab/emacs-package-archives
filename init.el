@@ -87,10 +87,14 @@
                    "docs"
                    "contrib/odt/LibreOffice")))
 (package! (org-extra-emphasis :host github :repo "QiangF/org-extra-emphasis"))
-(package! (denote :host sourcehut :repo "protesilaos/denote"))
+(package! (denote :host github :repo "protesilaos/denote"))
+(package! (denote-org :host github :repo "protesilaos/denote-org"))
 (package! (consult-notes :type git :host github :repo "mclear-tools/consult-notes"))
 (package! (lsp-java :type git :repo "emacs-lsp/lsp-java" :host github :files (:defaults "icons")))
 (package! (chatgpt-shell :type git :host github :repo "xenodium/chatgpt-shell"))
 (package! (ol-wl :host sourcehut :repo "bzg/org-contrib" :files ("lisp/ol-wl.el")))
 (package! (eglot-booster :host github :repo "jdtsmith/eglot-booster"))
+(package! (haskell-ng-mode :host gitlab :repo "magus/haskell-ng-mode"))
+(package! (show-blame-eldoc-mode :host github :repo "emacs-elysium-lab/show-blame-eldoc-mode"))
+
 ;;; init.el ends here
