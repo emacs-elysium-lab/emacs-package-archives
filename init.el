@@ -95,8 +95,8 @@
 (package! (ol-wl :host sourcehut :repo "bzg/org-contrib" :files ("lisp/ol-wl.el")))
 (package! (eglot-booster :host github :repo "jdtsmith/eglot-booster"))
 (package! (haskell-ng-mode :host gitlab :repo "magus/haskell-ng-mode"))
-(package! (show-blame-eldoc :host github 
-                                 :repo "emacs-elysium-lab/show-blame-eldoc"))
+(package! (praise-mode :host github 
+                                 :repo "emacs-elysium-lab/praise-mode"))
 (package! (chairs.el :host github :repo "emacs-elysium-lab/chairs.el"))
 
 ;;; init.el ends here
