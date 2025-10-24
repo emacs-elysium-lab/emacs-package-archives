@@ -96,8 +96,7 @@
 (package! (eglot-booster :host github :repo "jdtsmith/eglot-booster"))
 (package! (haskell-ng-mode :host gitlab :repo "magus/haskell-ng-mode"))
 (package! (show-blame-eldoc-mode :host github 
-                                 :repo "emacs-elysium-lab/show-blame-eldoc-mode"
-                                 :files ("sbe.el")))
+                                 :repo "emacs-elysium-lab/show-blame-eldoc"))
 (package! (chairs.el :host github :repo "emacs-elysium-lab/chairs.el"))
 
 ;;; init.el ends here
