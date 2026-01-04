@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- See etc/org/README for copyright information -->
+<office:document-content
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+    xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+    xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0"
+    xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"
+    xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"
+    xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0"
+    xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"
+    xmlns:math="http://www.w3.org/1998/Math/MathML"
+    xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"
+    xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0"
+    xmlns:ooo="http://openoffice.org/2004/office"
+    xmlns:ooow="http://openoffice.org/2004/writer"
+    xmlns:oooc="http://openoffice.org/2004/calc"
+    xmlns:dom="http://www.w3.org/2001/xml-events"
+    xmlns:xforms="http://www.w3.org/2002/xforms"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:rpt="http://openoffice.org/2005/report"
+    xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2"
+    xmlns:xodt="http://www.w3.org/1999/xodt"
+    xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0"    office:version="1.2">
+  <!-- scripts -->
+  <office:scripts/>
+
+  <!-- font face declarations -->
+  <office:font-face-decls>
+    <style:font-face style:name="Tahoma1" svg:font-family="Tahoma"/>
+    <style:font-face style:name="courier" svg:font-family="courier, monospace"/>
+    <style:font-face style:name="Arial Unicode MS" svg:font-family="&apos;Arial Unicode MS&apos;" style:font-pitch="variable"/>
+    <style:font-face style:name="HG Mincho Light J" svg:font-family="&apos;HG Mincho Light J&apos;" style:font-pitch="variable"/>
+    <style:font-face style:name="Thorndale" svg:font-family="Thorndale" style:font-family-generic="roman" style:font-pitch="variable"/>
+    <style:font-face style:name="Times New Roman" svg:font-family="&apos;Times New Roman&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
+    <style:font-face style:name="Albany" svg:font-family="Albany" style:font-family-generic="swiss" style:font-pitch="variable"/>
+    <style:font-face style:name="SimSun" svg:font-family="SimSun" style:font-family-generic="system" style:font-pitch="variable"/>
+    <style:font-face style:name="Tahoma" svg:font-family="Tahoma" style:font-family-generic="system" style:font-pitch="variable"/>
+  </office:font-face-decls>
+
+  <!-- automatic styles -->
+  <office:automatic-styles>
+
+    <!-- Section styles -->
+
+    <!-- Default section style -->
+    <style:style style:name="OrgSection" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+
+    <!-- Emit endnotes at the end of section     -->
+    <!-- <style:style style:name="OrgSection" style:family="section"> -->
+    <!--   <style:section-properties fo:background-color="transparent" style:editable="true"> -->
+    <!--	<style:columns fo:column-count="1" fo:column-gap="0cm"/> -->
+    <!--	<style:background-image/> -->
+    <!--	<text:notes-configuration text:note-class="endnote"/> -->
+    <!--   </style:section-properties> -->
+    <!-- </style:style> -->
+
+    <!-- Other handy section styles -->
+    <style:style style:name="OrgTwoColumnSection" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="2" fo:column-gap="0cm">
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	</style:columns>
+      </style:section-properties>
+    </style:style>
+
+    <style:style style:name="OrgThreeColumnSection" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="3" fo:column-gap="0cm">
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	</style:columns>
+      </style:section-properties>
+    </style:style>
+
+    <style:style style:name="OrgTwoColumnSection-1-2" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="2">
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	  <style:column style:rel-width="2*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	</style:columns>
+      </style:section-properties>
+    </style:style>
+
+    <style:style style:name="OrgTwoColumnSection-2-1" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="2">
+	  <style:column style:rel-width="2*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	  <style:column style:rel-width="1*" fo:start-indent="0cm" fo:end-indent="0cm"/>
+	</style:columns>
+      </style:section-properties>
+    </style:style>
+
+    <!-- Section styles for Table Of Contents and Other Indices -->
+    <style:style style:name="OrgIndexSection" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+	<style:background-image/>
+      </style:section-properties>
+    </style:style>
+
+    <!-- Indented sections, used as container for tables that occur
+	 within list items -->
+    <style:style style:name="OrgIndentedSection-Level-1" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="1.281cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-2" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="1.905cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-3" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="2.54cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-4" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="3.175cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-5" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="3.81cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-6" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="4.445cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-7" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="5.08cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-8" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="5.715cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-9" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="6.35cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    <style:style style:name="OrgIndentedSection-Level-10" style:family="section">
+      <style:section-properties text:dont-balance-text-columns="false" fo:margin-left="6.985cm" fo:margin-right="0cm" style:editable="false">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+
+    <!-- Section style for Bibliography -->    
+    <style:style style:name="OrgCSLBibBody" style:family="section">
+      <style:section-properties style:editable="true">
+	<style:columns fo:column-count="1" fo:column-gap="0cm"/>
+      </style:section-properties>
+    </style:style>
+    
+    <!-- Table styles -->
+    <style:style style:name="OrgTable" style:family="table">
+      <style:table-properties style:rel-width="96%" fo:margin-top="0cm" fo:margin-bottom="0.20cm" table:align="center"/>
+    </style:style>
+
+    <style:style style:name="OrgTableColumn" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="1*"/>
+    </style:style>
+
+    <style:style style:name="OrgTableRow" style:family="table-row">
+      <style:table-row-properties fo:keep-together="always"/>
+    </style:style>
+
+    <style:style style:name="OrgEquationTable" style:family="table"  style:parent-style-name="OrgTable">
+      <style:table-properties fo:margin-top="0cm" fo:margin-bottom="0.20cm" table:align="center"  style:rel-width="96.00%" />
+    </style:style>
+
+    <style:style style:name="OrgEquationTableColumn1" style:family="table-column" style:parent-style-name="OrgTableColumn">
+      <style:table-column-properties style:rel-column-width="888*"/>
+    </style:style>
+    <style:style style:name="OrgEquationTableColumn2" style:family="table-column" style:parent-style-name="OrgTableColumn">
+      <style:table-column-properties style:rel-column-width="111*"/>
+    </style:style>
+
+    <!-- BEGIN: Custom Table Template -->
+    <style:style style:name="Custom" style:family="table">
+      <style:table-properties style:rel-width="96%" fo:margin-top="0cm" fo:margin-bottom="0.20cm" table:align="center"/>
+    </style:style>
+
+    <style:style style:name="CustomColumn" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="1*"/>
+    </style:style>
+
+    <style:style style:name="CustomRow" style:family="table-row">
+      <style:table-row-properties fo:keep-together="always"/>
+    </style:style>
+    <!-- END: Custom Table Template -->
+
+    <style:style style:name="OrgConnector" style:family="graphic">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.0cm" svg:stroke-color="#000000" draw:marker-start="" draw:marker-start-width="0.519cm" draw:marker-start-center="false" draw:marker-end="Arrowheads_20_2" draw:marker-end-width="0.617cm" draw:marker-end-center="false" draw:fill="none" draw:fill-color="#729fcf" draw:textarea-horizontal-align="justify" draw:textarea-vertical-align="middle" fo:padding-top="0.231cm" fo:padding-bottom="0.231cm" fo:padding-left="0.356cm" fo:padding-right="0.356cm" fo:wrap-option="wrap" draw:shadow="hidden" draw:shadow-offset-x="0.199cm" draw:shadow-offset-y="0.199cm" draw:shadow-color="#808080" style:run-through="foreground" style:wrap="run-through" style:number-wrapped-paragraphs="no-limit" style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="from-left" style:horizontal-rel="paragraph" draw:wrap-influence-on-position="once-concurrent" style:flow-with-text="false"/>
+    </style:style>
+
+  </office:automatic-styles>
+
+  <office:body>
+    <office:text>
+      <text:sequence-decls>
+	<text:sequence-decl text:display-outline-level="0" text:name="Illustration"/>
+	<text:sequence-decl text:display-outline-level="0" text:name="Table"/>
+	<text:sequence-decl text:display-outline-level="0" text:name="Text"/>
+	<text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
+	<text:sequence-decl text:display-outline-level="0" text:name="Equation"/>
+	<text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
+	<text:sequence-decl text:display-outline-level="0" text:name="Listing"/>
+      </text:sequence-decls>
+    </office:text>
+  </office:body>
+</office:document-content>
