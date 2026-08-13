@@ -30,6 +30,7 @@ jobs:
 
       - name: Install dependency
         run: |
+          sudo rm -rf /var/lib/apt/lists/*
           sudo apt-get update
           sudo apt install -y libarchive-tools
           sudo timedatectl set-timezone "Asia/Shanghai"
