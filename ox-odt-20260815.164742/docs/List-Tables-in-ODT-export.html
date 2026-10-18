@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>List Tables in ODT export (OpenDocument Text Exporter for Emacs&rsquo; Org Mode)</title>
+
+<meta name="description" content="List Tables in ODT export (OpenDocument Text Exporter for Emacs&rsquo; Org Mode)">
+<meta name="keywords" content="List Tables in ODT export (OpenDocument Text Exporter for Emacs&rsquo; Org Mode)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Main-Index.html" rel="index" title="Main Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html" rel="up" title="Top">
+<link href="Tables-in-ODT-export.html" rel="next" title="Tables in ODT export">
+<link href="Links-in-ODT-export.html" rel="prev" title="Links in ODT export">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body lang="en">
+<div class="chapter" id="List-Tables-in-ODT-export">
+<div class="header">
+<p>
+Next: <a href="Tables-in-ODT-export.html" accesskey="n" rel="next">Tables in ODT export</a>, Previous: <a href="Links-in-ODT-export.html" accesskey="p" rel="prev">Links in ODT export</a>, Up: <a href="index.html" accesskey="u" rel="up">OpenDocument Text Exporter for Emacs&rsquo; Org Mode</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Main-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="List-Tables-in-ODT-export-1"></span><h2 class="chapter">8 List Tables in ODT export</h2>
+
+<p>A &lsquo;<samp>List Table</samp>&rsquo;, in simple terms, is a list that is typeset as a table.
+Use it to create tables with multi-paragraph content.
+</p>
+<dl compact="compact">
+<dt><span>Why a &lsquo;<samp>List Table</samp>&rsquo;?</span></dt>
+</dl>
+
+<p>Org mode&rsquo;s tables are line-oriented i.e., each row (and hence a cell)
+cannot span multiple lines.  This choice has serious limitations.
+Specifically, 
+</p>
+<ul>
+<li> a table cell cannot have more than a single paragraph
+
+</li><li> if the sole paragraph has copious text, the table will overflow your
+display screen, and editing or reviewing such tables is very
+cumbersome and annoying.
+</li></ul>
+
+<p>A list table overcomes the above problem.
+</p>
+<p>Lists that are marked with attribute &lsquo;:list-table&rsquo; are called as
+list tables.  They will be rendered as a table within the exported
+document.
+</p>
+
+<hr>
+<div class="section" id="Examples">
+<span id="Examples-1"></span><h3 class="section">8.1 Examples</h3>
+
+<dl compact="compact">
+<dt><span>A simple list table</span></dt>
+</dl>
+
+<p>Consider an example.  The following list table
+</p>
+<div class="example">
+<pre class="example">#+ATTR_ODT: :rel-width 80
+#+ATTR_ODT: :list-table t
+-
+  - Row 1, Col 1 
+  - Row 1, Col 2 
+  - Row 1, Col 3 
+  - Row 1, Col 4 
+- -----
+  - Row 2, Col 1 
+  - Row 2, Col 2 
+  - Row 2, Col 3 
+  - Row 2, Col 4 
+</pre></div>
+
+
+<p>will be exported as though it were an Org table like the one show
+below.
+</p>
+
+<div class="example">
+<pre class="example">| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 | Row 1, Col 4 |
+| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 | Row 2, Col 4 |
+</pre></div>
+
+<img src="list-table-1.png" alt="list-table-1">
+
+<hr>
+</div>
+<div class="section" id="A-list-table-with-rules-column-size-and-alignments">
+<span id="A-list-table-with-rules_002c-column-size-and-alignments"></span><h3 class="section">8.2 A list table with rules, column size and alignments</h3>
+
+<p>List tables honor all attributes save for the column alignments.
+</p>
+<div class="example">
+<pre class="example">#+ATTR_ODT: :list-table t
+- | /    | &lt;    | &gt;    |      |
+- | &lt;l2&gt; | &lt;l1&gt; | &lt;l1&gt; | &lt;l8&gt; |
+- 
+  - Row 1, Col 1
+  - Row 1, Col 2
+  - Row 1, Col 3
+  - Row 1, Col 4
+- ----------------
+  - Row 2, Col 1
+  - Row 2, Col 2
+  - Row 2, Col 3
+  - Row 2, Col 4
+</pre></div>
+
+<p>Above list table will be exported as if it were an Org table like the
+one below
+</p>
+<div class="example">
+<pre class="example">| /            | &lt;            | &gt;            |              |
+| &lt;l2&gt;         | &lt;l1&gt;         | &lt;l1&gt;         | &lt;l8&gt;         |
+| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 | Row 1, Col 4 |
+|--------------+--------------+--------------+--------------|
+| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 | Row 2, Col 4 |
+</pre></div>
+
+<img src="list-table-2.png" alt="list-table-2">
+
+<p>Here is a real-world table that uses the same template as the one
+above
+</p>
+<div class="example">
+<pre class="example">#+ATTR_ODT: :list-table t
+- | /    | &lt;    | &gt;    |      |
+- | &lt;l2&gt; | &lt;l1&gt; | &lt;l1&gt; | &lt;l8&gt; |
+- 
+  - Day
+  - Min Temp
+  - Max Temp
+  - Summary
+- ----------------
+  - Monday
+  - 11C
+  - 22C
+  - 
+    1. A clear day with lots of sunshine.
+    2. Late in the day, a strong breeze will bring down the temperatures.
+- ----------------
+  - Tuesday
+  - 9C
+  - 19C
+  - 
+    1. Cloudy with rain, across many northern regions.
+    2. Clear spells across most of Scotland and Northern Ireland, but
+       rain reaching the far northwest.
+</pre></div>
+
+<img src="list-table-3.png" alt="list-table-3">
+
+<hr>
+</div>
+<div class="section" id="List-table-with-table-and-figures">
+<span id="List-table-with-table-and-figures-1"></span><h3 class="section">8.3 List table with table and figures</h3>
+
+<p>List tables are particularly well-suited for creating captioned
+side-by-side images.  Note that with conventional &lsquo;<samp>org</samp>&rsquo; tables, even
+though you can place images side-by-side using a table, you cannot
+caption them.
+</p>
+<div class="example">
+<pre class="example">#+ATTR_ODT: :list-table t
+- 
+  - 
+    #+CAPTION: A Unicorn
+    [[./org-mode-unicorn.png]]
+  - 
+    #+CAPTION: Yet another Unicorn
+    [[./org-mode-unicorn.png]]
+</pre></div>
+
+<img src="list-table-4.png" alt="list-table-4">
+
+<hr>
+</div>
+<div class="section" id="List-table-can-contain-other-tables">
+<span id="List-table-can-contain-other-tables-1"></span><h3 class="section">8.4 List table can contain other tables</h3>
+
+<div class="example">
+<pre class="example">#+ATTR_ODT: :list-table t
+- 
+  - Comments
+  - A Dog &amp; A Cat
+- --------
+  - This table contains
+    - A Dog
+    - A cat
+
+    | Animal | What it does |
+    |--------+--------------|
+    | Dog    | Barks        |
+    | Cat    | News         |
+
+  - 
+    #+ATTR_ODT: :list-table t
+    - 
+      - 
+        #+CAPTION: A Dog
+        #+ATTR_ODT: :scale .8
+        [[./org-mode-unicorn.png]]
+      - 
+        #+CAPTION: A Cat
+        #+ATTR_ODT: :scale .8
+        [[./org-mode-unicorn.png]]
+- --------
+</pre></div>
+
+<img src="list-table-6.png" alt="list-table-6">
+
+</div>
+</div>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Tables-in-ODT-export.html" accesskey="n" rel="next">Tables in ODT export</a>, Previous: <a href="Links-in-ODT-export.html" accesskey="p" rel="prev">Links in ODT export</a>, Up: <a href="index.html" accesskey="u" rel="up">OpenDocument Text Exporter for Emacs&rsquo; Org Mode</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Main-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>
